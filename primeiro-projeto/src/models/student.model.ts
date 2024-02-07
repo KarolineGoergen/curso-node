@@ -11,16 +11,21 @@ export interface IStudent {
 
 export const studentSchema = new Schema<IStudent>({
     name: {
-        type: String
+        type: String,
+        required:true
     },
     mail: {
-        type: String
+        type: String,
+        unique: true,
+        required:true
     },
     password: {
-        type: String
+        type: String,
+        required:true
     },
     age: {
-        type: Number
+        type: Number,
+        required:true
     },
     createdAt: {
         type: Date,

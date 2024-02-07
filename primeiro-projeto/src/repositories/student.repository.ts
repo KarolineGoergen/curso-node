@@ -6,7 +6,7 @@ class StudentRepository {
     }
 
     getByMail(mail: string){
-        return Student.findOne({mail: mail});
+        return Student.findOne({ mail: mail });
     }
 
     create(student: IStudent){
@@ -14,11 +14,11 @@ class StudentRepository {
     }
 
     update(mail: string, student: Partial<IStudent>){
-        return Student.updateOne({mail: mail}, {$set:student});
+        return Student.updateOne({ mail: mail }, { $set:student });
     }
 
-    remove(mail:string){
-        return Student.deleteOne({mail: mail});
+    async remove(mail:string){
+        return Student.deleteOne({ mail: mail });
     }
 }
 

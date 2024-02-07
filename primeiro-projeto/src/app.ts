@@ -2,7 +2,7 @@
 import express from 'express';
 import cors from 'cors';
 import routes from './routers';
-import connection from './config/database';
+import connection from './configurations/database';
 
 const app = express();
 app.use(cors());
